@@ -1,6 +1,7 @@
 /**
  * Custom CSS
  */
+body { background-color: #f5f5f5; }
 .is-default { background-color: #ffffff; }
 .hidden-link { text-decoration: none !important; }
 .carousel-item { display: none; }
