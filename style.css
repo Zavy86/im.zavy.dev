@@ -1,0 +1,13 @@
+/**
+ * Custom CSS
+ */
+.is-default { background-color: #ffffff; }
+.hidden-link { text-decoration: none !important; }
+.carousel-item { display: none; }
+.carousel-item.active { display: block; }
+.flashing { animation: flashing 2s infinite; }
+@keyframes flashing {
+  0% { opacity: 1; }
+  36% { opacity: 0; }
+  100% { opacity: 1; }
+}
