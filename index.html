@@ -321,11 +321,14 @@
     document.getElementById('coding_years_small').dataset.target = ( new Date().getFullYear() - 2009 ).toString();
     document.getElementById('youtube_subscribers').dataset.target = ( 2699 ).toString();
     document.getElementById('wikidocs_stars').dataset.target = ( 349 ).toString();
-    // retrieve Wiki|Docs starts
-    fetch('https://api.github.com/repos/Zavy86/WikiDocs')
+    // retrieve stats
+    fetch('https://automations.zavy.im/webhook/3d40e896-71ba-498e-88fd-81d945874132')
       .then(response => response.json())
-      .then(data => { document.getElementById('wikidocs_stars').dataset.target = ( data.stargazers_count ).toString(); })
-      .catch(error => { console.error('Error retrieving data from GitHub API:', error); });
+      .then(data => {
+        document.getElementById('youtube_subscribers').dataset.target = ( data.youtube_subscribers ).toString();
+        document.getElementById('wikidocs_stars').dataset.target = ( data.youtube_subscribers ).toString();
+      })
+      .catch(error => { console.error('Error retrieving stats from n8n', error); });
     // carousel
     let currentIndex = 0;
     const items = document.querySelectorAll('.carousel-item');
