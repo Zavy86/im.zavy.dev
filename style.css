@@ -3,6 +3,8 @@
  */
 body { background-color: #f5f5f5; }
 .is-default { background-color: #ffffff; }
+.is-p-full-responsive { font-size: 18vw; margin: auto; }
+.is-image-full-responsive { max-width: 512px; margin: 48px auto 48px auto; }
 .hidden-link { text-decoration: none !important; }
 .carousel-item { display: none; }
 .carousel-item.active { display: block; }
