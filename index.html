@@ -134,7 +134,7 @@
       </figure>
       <p class="subtitle">
         follow me on <a href="https://www.youtube.com/@Zavy86?sub_confirmation=1">YouTube</a>
-        like other <span id="subscribers" class="has-text-link animated_number">_</span> people
+        like other <span id="youtube_subscribers" class="has-text-link animated_number">_</span> people
       </p>
       <p><a class="show-more" data-target='content-creator'>show more&hellip;</a></p>
     </div><!-- container -->
@@ -165,7 +165,7 @@
         <img src="images/logo_github.png" alt="logo github">
       </figure>
       <p class="subtitle has-text-white-ter">
-        and I got <span id="stars" class="has-text-info animated_number">_</span> stars
+        and I got <span id="wikidocs_stars" class="has-text-info animated_number">_</span> stars
         on my side project <a href="https://github.com/Zavy86/WikiDocs" class="has-text-info" target="_blank">Wiki|Docs</a>
       </p>
       <p><a class="show-more has-text-info" data-target='open-source'>show more&hellip;</a></p>
@@ -319,8 +319,13 @@
     document.getElementById('current_year').innerText = ( new Date().getFullYear() ).toString();
     document.getElementById('coding_years_big').dataset.target = ( new Date().getFullYear() - 2009 ).toString();
     document.getElementById('coding_years_small').dataset.target = ( new Date().getFullYear() - 2009 ).toString();
-    document.getElementById('subscribers').dataset.target = ( 2999 ).toString();
-    document.getElementById('stars').dataset.target = ( 250 ).toString();
+    document.getElementById('youtube_subscribers').dataset.target = ( 2699 ).toString();
+    document.getElementById('wikidocs_stars').dataset.target = ( 349 ).toString();
+    // retrieve Wiki|Docs starts
+    fetch('https://api.github.com/repos/Zavy86/WikiDocs')
+      .then(response => response.json())
+      .then(data => { document.getElementById('wikidocs_stars').dataset.target = ( data.stargazers_count ).toString(); })
+      .catch(error => { console.error('Error retrieving data from GitHub API:', error); });
     // carousel
     let currentIndex = 0;
     const items = document.querySelectorAll('.carousel-item');
