@@ -326,7 +326,7 @@
       .then(response => response.json())
       .then(data => {
         document.getElementById('youtube_subscribers').dataset.target = ( data.youtube_subscribers ).toString();
-        document.getElementById('wikidocs_stars').dataset.target = ( data.youtube_subscribers ).toString();
+        document.getElementById('wikidocs_stars').dataset.target = ( data.wikidocs_stars ).toString();
       })
       .catch(error => { console.error('Error retrieving stats from n8n', error); });
     // carousel
