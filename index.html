@@ -329,7 +329,7 @@
     document.getElementById('youtube_subscribers').dataset.target = ( 2699 ).toString();
     document.getElementById('wikidocs_stars').dataset.target = ( 349 ).toString();
     // retrieve stats
-    fetch('https://automations.zavy.im/webhook/3d40e896-71ba-498e-88fd-81d945874132')
+    fetch('https://automations.vps.zavy.dev/webhook/3d40e896-71ba-498e-88fd-81d945874132')
       .then(response => response.json())
       .then(data => {
         document.getElementById('youtube_subscribers').dataset.target = ( data.youtube_subscribers ).toString();
