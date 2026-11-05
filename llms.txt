@@ -1,0 +1,43 @@
+# Manuel Zavatta
+
+> Manuel Zavatta is a software developer and content creator who builds software, designs systems, and shares his
+experience through open-source projects, training, and technology videos.
+
+## Background and experience
+
+Manuel turned independent learning and consulting into a career in software development. He can build an MVP from
+scratch and particularly enjoys designing lightweight, distributed and synchronized backend systems.
+
+He began freelancing in April 2009, building websites and office automation applications and providing IT consulting,
+training, and technical support. In 2010 he co-founded Gruppo MIPS, an IT and communications cooperative, where he
+managed the IT division and administration. In July 2013 he joined the IT team of an international stainless steel
+manufacturer, working on digitalization projects. In 2025 he reactivated his VAT registration for his content creation
+work, brand collaborations, masterclasses, and occasional freelance projects alongside his full-time IT role.
+
+## Content creation
+
+Manuel launched his YouTube channel in March 2022 to share his experience and help aspiring developers. He covers
+software development, system design, databases, servers, optimization, and technology from a developer's perspective.
+
+## Open source
+
+In 2019 Manuel created Wiki|Docs, an open-source wiki designed to be simple to install and use, with Markdown support.
+He has been rewriting the project with a more structured approach and welcomes contributors.
+
+## Services
+
+- MVP development: build a working product focused on essential features to test an idea and collect feedback.
+- Project and architecture consulting: analyze requirements, evaluate technologies, and design scalable, secure,
+  maintainable software systems.
+- Training and mentorship: personalized theoretical and practical learning paths.
+- Brand and product collaborations: create content for products or services suited to his audience.
+
+## Links and contact
+
+- [English portfolio](https://im.zavy.dev/en/): Full experience, services, and contact information.
+- [Italian portfolio](https://im.zavy.dev/it/): Same portfolio but localized in Italian.
+- [GitHub](https://github.com/Zavy86): Projects and code.
+- [YouTube](https://www.youtube.com/@Zavy86): Technology and developer videos.
+- [LinkedIn](https://www.linkedin.com/in/manuel-zavatta/): Professional profile and contact.
+- [Newsletter](https://zavy86.substack.com/): Manuel's newsletter.
+- Email: write@zavy.dev
