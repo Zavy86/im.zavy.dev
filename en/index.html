@@ -11,23 +11,39 @@
 -->
 <html xmlns="http://www.w3.org/1999/html" lang="en">
 <head>
-  <title>Manuel Zavatta</title>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Manuel Zavatta | Software Developer &amp; Content Creator</title>
   <meta name="author" content="Manuel Zavatta"/>
   <meta name="keywords" content="manuel zavatta profile, manuel zavatta skills, manuel zavatta experience, manuel zavatta projects, manuel zavatta portfolio, manuel zavatta resume, manuel zavatta cv, manuel zavatta, zavy86, zavy"/>
-  <meta name="description" content="Hey, it's great to see you here! Find out who I am, what I do, and how I can help you..."/>
+  <meta name="description" content="Manuel Zavatta's portfolio: software development, system architecture, open-source projects, training, and technology content on YouTube."/>
+  <meta name="robots" content="index, follow, max-image-preview:large"/>
+  <meta name="theme-color" content="#3d464d"/>
+  <link rel="canonical" href="https://im.zavy.dev/en/"/>
+  <link rel="alternate" hreflang="en" href="https://im.zavy.dev/en/"/>
+  <link rel="alternate" hreflang="it" href="https://im.zavy.dev/it/"/>
+  <link rel="alternate" hreflang="x-default" href="https://im.zavy.dev/"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://im.zavy.dev/en/"/>
-  <meta property="og:site_name" content="https://zavy.dev"/>
+  <meta property="og:site_name" content="Manuel Zavatta"/>
+  <meta property="og:title" content="Manuel Zavatta | Software Developer &amp; Content Creator"/>
+  <meta property="og:description" content="Manuel Zavatta's portfolio: software development, system architecture, open-source projects, training, and technology content on YouTube."/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:locale:alternate" content="it_IT"/>
   <meta property="og:image" content="https://im.zavy.dev/images/open-graph.jpg"/>
-  <meta property="og:title" content="Manuel Zavatta"/>
-  <meta property="og:description" content="Hey, it's great to see you here! Find out who I am, what I do, and how I can help you..."/>
-  <meta name="theme-color" content="#3d464d"/>
+  <meta property="og:image:type" content="image/jpeg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="Manuel Zavatta next to a speech bubble reading &quot;ciao devs&quot;."/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Manuel Zavatta | Software Developer &amp; Content Creator"/>
+  <meta name="twitter:description" content="Manuel Zavatta's portfolio: software development, system architecture, open-source projects, training, and technology content on YouTube."/>
+  <meta name="twitter:image" content="https://im.zavy.dev/images/open-graph.jpg"/>
+  <meta name="twitter:image:alt" content="Manuel Zavatta next to a speech bubble reading &quot;ciao devs&quot;."/>
   <link rel="shortcut icon" href="../images/favicon.ico">
   <link rel="icon" sizes="256x256" href="../images/favicon.png">
   <link rel="stylesheet" type="text/css" href="../helpers/animate-4.1.1/animate.min.css"/>
-  <link rel="stylesheet" type="text/css" href="../helpers/bulma-1.0.2/css/bulma.min.css" />
+  <link rel="stylesheet" type="text/css" href="../helpers/bulma-1.0.2/css/bulma.min.css"/>
   <link rel="stylesheet" type="text/css" href="../style.css"/>
 </head>
 <body>
@@ -313,74 +329,6 @@
     </p>
   </div>
 </footer>
-<!-- scripts -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // set values
-    document.getElementById('current_year').innerText = ( new Date().getFullYear() ).toString();
-    document.getElementById('coding_years_big').dataset.target = ( new Date().getFullYear() - 2009 ).toString();
-    document.getElementById('coding_years_small').dataset.target = ( new Date().getFullYear() - 2009 ).toString();
-    document.getElementById('youtube_subscribers').dataset.target = ( 2699 ).toString();
-    document.getElementById('wikidocs_stars').dataset.target = ( 349 ).toString();
-    // retrieve stats
-    const statsReady = fetch('https://automations.vps.zavy.dev/webhook/3d40e896-71ba-498e-88fd-81d945874132', {
-      signal: AbortSignal.timeout(10000)
-    })
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('youtube_subscribers').dataset.target = ( data.youtube_subscribers ).toString();
-        document.getElementById('wikidocs_stars').dataset.target = ( data.wikidocs_stars ).toString();
-      })
-      .catch(error => { console.error('Error retrieving stats from n8n', error); });
-    // carousel
-    let currentIndex = 0;
-    const items = document.querySelectorAll('.carousel-item');
-    function showItem(index) {
-      items.forEach((item, i) => {
-        item.classList.toggle('active', i === index);
-      });
-    }
-    function nextItem() {
-      currentIndex = (currentIndex + 1) % items.length;
-      showItem(currentIndex);
-    }
-    showItem(currentIndex);
-    setInterval(nextItem, 10000);
-    // animated numbers
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          statsReady.then(() => incrementNumber(entry.target));
-          observer.unobserve(entry.target);
-        }
-      });
-    },{ threshold: 0.27 });
-    document.querySelectorAll('.animated_number').forEach(tag => observer.observe(tag));
-    function incrementNumber(element) {
-      const targetNumber = parseInt(element.getAttribute('data-target'), 10);
-      let currentNumber = Math.max((targetNumber - 270),0);
-      let incrementTime = 270;
-      function updateNumber() {
-        if (currentNumber < targetNumber) {
-          currentNumber++;
-          element.textContent = currentNumber.toLocaleString('en-US');
-          incrementTime = incrementTime / 2;
-          if(incrementTime < 1){incrementTime = 1;}
-          setTimeout(updateNumber, incrementTime);
-        }
-      }
-      setTimeout(updateNumber,1000);
-    }
-  });
-  // show more
-  document.querySelectorAll('.show-more').forEach(link => {
-    link.addEventListener('click', function() {
-      const targetElement = document.getElementById(this.dataset.target);
-      targetElement.classList.remove('is-hidden');
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-      this.remove();
-    });
-  });
-</script>
+<script src="../script.js"></script>
 </body>
 </html>
